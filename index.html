@@ -29,6 +29,22 @@
         appId: "1:9506943794:web:85c072177216604d051d2b",
         measurementId: "G-VNG3D5KQFL"
       };
+    /*Inicializa o firebase na aplicação web*/
+    firebase.initializeApp(firebaseConfig);
+
+    /*Inicialize a conexão com o banco no sql firestore */
+    const db = firebase.firestore();
+
+    /* Teste da conexão com o firestore*/
+   // console.log(db);
+    //console.log('TEST DE CONEXÃO COM O FIRESTORE')
+
+
+
+
 </script>
+
+
+
 <script src="app.js"></script>
 </html>
