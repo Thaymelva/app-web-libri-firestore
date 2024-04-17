@@ -4,47 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB APP LIBRI - FIREBASE: FIRESTORE</title>
-
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    
-    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
     <h1>WEB APP LIBRI - FIREBASE: FIRESTORE</h1>
     <div class="content">
-        <form id="add-book-form"></form>
+        <form id="add-book-form">
+            <input type="text" name="livro" id="livro" placeholder="Digite o nome do livro aqui">
+            <input type="text" name="autor" id="autor" placeholder="Digite o nome do autor aqui">
+            <button type="submit">CADASTRAR</button>
+        </form>
         <ul id="book-list"></ul>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDhFkKZYG1r2FYYLGVo2979cAQsMyd6n-A",
+            authDomain: "app-libri-thayanne.firebaseapp.com",
+            projectId: "app-libri-thayanne",
+            storageBucket: "app-libri-thayanne.appspot.com",
+            messagingSenderId: "9506943794",
+            appId: "1:9506943794:web:85c072177216604d051d2b",
+            measurementId: "G-VNG3D5KQFL"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+
+    <script src="app.js"></script> <!-- Este script inclui suas funções personalizadas -->
 </body>
-<script src="app.js"></script>
-<script>
-    const firebaseConfig = {
-        apiKey: "AIzaSyDhFkKZYG1r2FYYLGVo2979cAQsMyd6n-A",
-        authDomain: "app-libri-thayanne.firebaseapp.com",
-        projectId: "app-libri-thayanne",
-        storageBucket: "app-libri-thayanne.appspot.com",
-        messagingSenderId: "9506943794",
-        appId: "1:9506943794:web:85c072177216604d051d2b",
-        measurementId: "G-VNG3D5KQFL"
-      };
-    /*Inicializa o firebase na aplicação web*/
-    firebase.initializeApp(firebaseConfig);
-
-    /*Inicialize a conexão com o banco no sql firestore */
-    const db = firebase.firestore();
-
-    /* Teste da conexão com o firestore*/
-   // console.log(db);
-    //console.log('TEST DE CONEXÃO COM O FIRESTORE')
-
-
-
-
-</script>
-
-
-
-<script src="app.js"></script>
 </html>
